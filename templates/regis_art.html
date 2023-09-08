@@ -1,0 +1,16 @@
+{% extends 'base.html' %} 
+<!---->
+{% load bootstrap5 %}
+<!---->
+{% block title %}
+Add New Articel
+{% endblock title %}
+<!---->
+{% block content %}
+<form action="regisart" method="post">
+    {% csrf_token %}
+    
+    {% bootstrap_form form %}
+    <input type="submit" value="Add Articel">
+</form>
+{% endblock content %}

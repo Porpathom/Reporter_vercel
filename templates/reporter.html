@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Reporter Page
+{% endblock title %}
+
+{% block content %}
+{{message}}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Email</th>
+            <th scope="col">Number Of Writings</th>
+        </tr>
+        {% for reporters in reporter %}
+        <tr>
+            <th scope="row">{{ forloop.counter }}</th>
+            <td>{{ reporters.first_name }}</td>
+            <td>{{ reporters.last_name }}</td>
+            <td>{{ reporters.email }}</td>
+            <td>{{ reporters.counter }}</td>
+
+        </tr>
+        {% endfor %}
+
+    </thead>
+    <tbody>
+      
+    </tbody>
+  </table>
+  
+{% endblock content %}

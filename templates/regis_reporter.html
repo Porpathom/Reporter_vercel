@@ -1,0 +1,16 @@
+{% extends 'base.html' %} 
+<!---->
+{% load bootstrap5 %}
+<!---->
+{% block title %}
+Add New Reporter
+{% endblock title %}
+<!---->
+{% block content %}
+<form action="regisreporter" method="post">
+    {% csrf_token %}
+    
+    {% bootstrap_form form %}
+    <input type="submit" value="Add Reporter">
+</form>
+{% endblock content %}

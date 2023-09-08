@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+   About Reporter
+{% endblock title %}
+
+{% block content %}
+{{message}}
+<table class="table">
+    <thead>
+      <tr>
+        <td scope="col">First</td>
+        <td>{{ rd.first_name }}</td>
+      </tr>
+      <tr>
+        <td scope="col">Last</td>
+        <td>{{ rd.last_name }}</td>
+      </tr>
+      <tr>
+        <td scope="col">Email</td>
+        <td>{{ rd.email }}</td>
+      </tr>
+      <tr>
+        <td scope="col">Number Of Writings</td>
+        <td>{{ rd.counter }}</td>
+      </tr>
+
+    </thead>
+    <tbody>
+      
+    </tbody>
+  </table>
+{% endblock content %}

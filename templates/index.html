@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+   Type Of News
+{% endblock title %}
+
+{% block content %}
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">HeadLine</th>
+        <th scope="col">Type</th>
+        <th scope="col">Author</th>
+        <th scope="col">Email</th>
+        <th scope="col">Date</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for art in arts %}
+        <tr>
+            <th scope="row">{{ forloop.counter }}</th>
+            <td><a href="{% url 'details' art.id %}"> {{ art.head_line }}</a></td>
+            <td>{{ art.cat_str }}</td>
+            <td><a href="{% url 'about' art.reporter.first_name %}"> {{ art.reporter }}</a></td>
+            <td>{{ art.reporter.email }}</td>
+            <td>{{ art.pub_date }}</td>
+            
+        </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+{% endblock content %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+<!---->
+{% block title %}
+   Details_Page
+{% endblock title %}
+
+<!---->
+{% block content %}
+{{message}}
+<table class="table">
+    <thead>
+      <tr>
+        <td scope="col">Title</td>
+        <td>{{ art.head_line }}</td>
+      </tr>
+      <tr>
+        <td scope="col">Date</td>
+        <td>{{ art.pub_date }}</td>
+      </tr>
+      <tr>
+        <td scope="col">Details</td>
+        <td>{{ art.pub_data }}</td>
+      </tr>
+
+    </thead>
+    <tbody>
+      
+    </tbody>
+  </table>
+{% endblock content %}
