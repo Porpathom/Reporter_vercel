@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'web',
-    'django_dump_load_utf8',
+    
     'bootstrap5',
 ]
 
