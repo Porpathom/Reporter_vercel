@@ -27,10 +27,6 @@ def about(request,slug):
     for i in reporter:
         i.counter = Art.objects.filter(reporter=i).count()
         context["rd"] = i
-
-        
-
-
     return render(request, "about.html", context)
 
 def reporter(request):

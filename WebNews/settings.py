@@ -86,7 +86,7 @@ DATABASES = {
         'USER' :'postgres',
         'PASSWORD' :'pathom0966788627',
         'HOST' : 'db.rvuwltkzoixmmcsdnfwv.supabase.co',
-        'PORT' : '6543'
+        'PORT' : '5432'
     }
 }
 
@@ -125,7 +125,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+
+STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [BASE_DIR / 'statics', ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
